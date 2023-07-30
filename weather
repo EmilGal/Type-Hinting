@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+
+from get_gps_coordinates import get_coordinates 
+from weather_api_service import get_weather
+from wheather_formatter import format_wheather
+
+
+def start():
+    coordinates = get_coordinates()
+    weather = get_weather()
+    return format_wheather(weather)
+
+
+if __name__ == '__main__':
+    result = start()
+    print(result)
